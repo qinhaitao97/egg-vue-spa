@@ -1,0 +1,55 @@
+{
+  "extends": "eslint-config-egg",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-parens": [ "error", "as-needed" ],
+    "valid-jsdoc": "off",
+    "eol-last": "off",
+    "array-bracket-spacing": [ "error", "always", { "objectsInArrays": false, "arraysInArrays": false } ],
+    "no-unused-vars": "warn",
+    "no-else-return": "error",
+    "strict": "off",
+    "linebreak-style": [ "warn", "unix" ],
+    "newline-per-chained-call": "off",
+    "no-irregular-whitespace": [
+      "error",
+      {
+        "skipComments": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline"
+      }
+    ],
+    "arrow-spacing": "error",
+    "semi": [ "error", "never" ],
+    "default-case": "error",
+    "use-isnan": "error",
+    "space-before-function-paren": "off",
+    "space-before-blocks": [ "error", "always" ],
+    "no-var": "error",
+    "no-cond-assign": "error",
+    "dot-notation": [ "warn", { "allowKeywords": true } ],
+    "eqeqeq": "error"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true,
+    "jquery": true,
+    "es6": true
+  },
+  "globals": {
+    "EASY_ENV_IS_PROD": true,
+    "EASY_ENV_IS_NODE": true,
+    "EASY_ENV_IS_BROWSER": true,
+    "EASY_ENV_IS_DEV": true
+  },
+  "parser": "babel-eslint"
+}

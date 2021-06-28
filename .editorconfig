@@ -1,0 +1,18 @@
+# top-most EditorConfig file，最高优先级
+root = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.js]
+trim_trailing_whitespace = false
+
+[*]
+indent_style = space
+indent_size = 2
+
+# 保证在任何操作系统上都有统一的行尾结束字符
+end_of_line = lf
+charset = utf-8
+insert_final_newline = false
+max_line_length = 120
