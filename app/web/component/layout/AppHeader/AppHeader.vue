@@ -42,6 +42,5 @@
       height 100%
       right 60px
       top 0
-      border 1xp solid #000
       line-height 48px
 </style>
