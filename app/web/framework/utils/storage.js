@@ -21,16 +21,16 @@
     * @param {String} type
     * @param {String} key
     */
-   getItem(type = 'local', key) {
+   getItem(key, type = 'local') {
      return this.getStorage(type)[key]
    },
 
    /** 设置 storage
-    * @param {String} type storage类型
     * @param {String} key
     * @param {String} val
+    * @param {String} type storage类型
     */
-   setItem(type = 'local', key, val) {
+   setItem(key, val, type = 'local') {
      const storageType = type === 'local' ? 'localStorage' : 'sessionStorage'
      const storage = JSON.parse(window[storageType].getItem(config.namespace) || "{}")
 
@@ -40,10 +40,10 @@
    },
 
    /** 清除 storage 某项值
-    * @param {String} type
     * @param {String} key
+    * @param {String} type
     */
-   clearItem(type = 'local', key) {
+   clearItem(key, type = 'local') {
      const storageType = type === 'local' ? 'localStorage' : 'sessionStorage'
      const storage = this.getStorage(type)
 

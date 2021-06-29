@@ -7,11 +7,11 @@
 
  export default {
    getToken() {
-     return storage.getItem('local', 'token')
+     return storage.getItem('token')
    },
 
    hasToken() {
-     const token = storage.getItem('local', 'token')
+     const token = storage.getItem('token')
      return (token === '') || (token === undefined) ? false : true
    },
 
@@ -19,11 +19,11 @@
     * @param {String} token
     */
    setToken(token) {
-     storage.setItem('local', 'token', token)
+     storage.setItem('token', token)
    },
 
    /**　清除 token */
    clearToken() {
-     storage.clearItem('local', 'token')
+     storage.clearItem('token')
    },
  }
