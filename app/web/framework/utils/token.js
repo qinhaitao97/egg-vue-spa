@@ -11,7 +11,7 @@
    },
 
    hasToken() {
-     const token = storage.getItem('local', 'token') === ''
+     const token = storage.getItem('local', 'token')
      return (token === '') || (token === undefined) ? false : true
    },
 
