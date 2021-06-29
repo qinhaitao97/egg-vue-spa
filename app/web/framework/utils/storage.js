@@ -21,7 +21,7 @@
     * @param {String} type
     * @param {String} key
     */
-   getItem(type, key) {
+   getItem(type = 'local', key) {
      return this.getStorage(type)[key]
    },
 
@@ -30,7 +30,7 @@
     * @param {String} key
     * @param {String} val
     */
-   setItem(type, key, val) {
+   setItem(type = 'local', key, val) {
      const storageType = type === 'local' ? 'localStorage' : 'sessionStorage'
      const storage = JSON.parse(window[storageType].getItem(config.namespace) || "{}")
 
@@ -43,7 +43,7 @@
     * @param {String} type
     * @param {String} key
     */
-   clearItem(type, key) {
+   clearItem(type = 'local', key) {
      const storageType = type === 'local' ? 'localStorage' : 'sessionStorage'
      const storage = this.getStorage(type)
 
@@ -55,7 +55,7 @@
    /** 清空 storage
     * @param {String} type
     */
-   clearAll(type) {
+   clearAll(type = 'local') {
      const storageType = type === 'local' ? 'localStorage' : 'sessionStorage'
 
      window[storageType].clear()
