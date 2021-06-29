@@ -1,10 +1,10 @@
 'use strict'
 
 import axios from './request'
+import config from 'framework/config'
 
-// node 执行环境
-const env = process.env.NODE_ENV || 'prod'
-const prefixURL = env === 'dev' ? '/mock' : ''
+// 请求路径前缀 URL
+const prefixURL = config.env === 'dev' ? '/mock' : ''
 
 // 测试类接口
 const testApi = {
